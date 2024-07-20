@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jul 2024 pada 07.06
+-- Waktu pembuatan: 20 Jul 2024 pada 08.05
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.4.23
 
@@ -36,13 +36,6 @@ CREATE TABLE `feedback` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `feedback`
---
-
-INSERT INTO `feedback` (`id_feedback`, `userid`, `id_topik`, `id_percobaan`, `comment`, `created_at`, `updated_at`) VALUES
-(1, 1, 6, 15, 'mudah sulit', '2024-06-07 11:25:26', '2024-06-07 11:25:26');
 
 -- --------------------------------------------------------
 
@@ -132,14 +125,9 @@ CREATE TABLE `std_submit` (
 --
 
 INSERT INTO `std_submit` (`id_submit`, `id_topic`, `id_percobaan`, `userid`, `checkstat`, `checkresult`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 4, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-06-07 15:08:14', '2024-06-07 15:08:14'),
-(2, 1, 1, 1, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-06-07 15:12:14', '2024-06-07 15:12:14'),
-(3, 2, 2, 1, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-06-07 15:29:41', '2024-06-07 15:29:41'),
-(4, 2, 3, 1, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-06-07 15:31:06', '2024-06-07 15:31:06'),
-(5, 2, 4, 1, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-06-07 15:31:40', '2024-06-07 15:31:40'),
-(6, 2, 5, 1, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-06-07 23:14:23', '2024-06-07 23:14:23'),
-(7, 2, 2, 5, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-07-07 08:27:08', '2024-07-07 08:27:08'),
-(8, 2, 5, 5, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-07-07 08:45:26', '2024-07-07 08:45:26');
+(10, 2, 2, 7, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-07-20 05:44:03', '2024-07-20 05:44:03'),
+(11, 1, 1, 7, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-07-20 05:45:45', '2024-07-20 05:45:45'),
+(12, 2, 3, 7, 'PASSED', 'The system cannot find the path specified.\n<br>', '2024-07-20 05:59:28', '2024-07-20 05:59:28');
 
 -- --------------------------------------------------------
 
@@ -205,11 +193,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `status`, `email`, `email_verified_at`, `password`, `remember_token`, `levelid`, `status_id`, `created_at`, `updated_at`) VALUES
-(1, 'StudentWals', 'student', 'studentwals@gmail.com', NULL, '$2y$10$MvH.4g8pNXlf7yjR3cyv1uoGr0tp.T7PLzZE5hM8nnzWGdd1g/WYW', NULL, 3, 'active', '2020-02-10 10:28:26', '2024-05-31 22:55:30'),
-(2, 'AdminWals', 'admin', 'adminwals@gmail.com', NULL, '$2y$10$tIZQdSS4Agd/Dw6L/SEfe.jQL3avyru9TB1tDuuZeXuBWRRDn/F2i', 'pBZyDI3s6qz6eqJjiI4ZRnatU6FEL2EupArBUNtdwds8UzGl43GYMuUDrDQ2', 0, 'active', '2020-02-10 11:12:17', '2024-05-31 22:55:44'),
-(3, 'TeacherWals', 'teacher', 'teacherwals@gmail.com', NULL, '$2y$10$d.MgC66ykIKEU/iramDmDOVme2bbh5O2bjG4GNb33MXa6yBPoEE5S', '63NJJnVuX23PFwCF1eWFrd0D5Ehi3qWClANbpG5sBiWp7k4dWR90mwE4J8xO', 0, 'active', '2020-02-10 11:33:45', '2024-05-31 22:55:58'),
-(4, 'agus', 'student', 'agus@gmail.com', NULL, '$2y$10$5n1c4AZaJNzDDHCS/0WaDO290x8VfcQph29agn5ZKUnRMF9NukRPS', NULL, 3, 'Active', '2024-06-07 03:55:32', '2024-06-07 03:55:32'),
-(5, 'joko', 'student', 'joko@gmail.com', NULL, '$2y$10$c3aijwx5STMtBDrjjLJA2ukRp50V/RiACDJxKBKoCzi.X3tHMLgLG', NULL, 3, 'Active', '2024-07-07 01:12:41', '2024-07-07 01:12:41');
+(1, 'StudentWals', 'student', 'studentwals@gmail.com', NULL, '$2y$10$MvH.4g8pNXlf7yjR3cyv1uoGr0tp.T7PLzZE5hM8nnzWGdd1g/WYW', NULL, 3, 'active', '2024-02-10 10:28:26', '2024-05-31 22:55:30'),
+(2, 'AdminWals', 'admin', 'adminwals@gmail.com', NULL, '$2y$10$tIZQdSS4Agd/Dw6L/SEfe.jQL3avyru9TB1tDuuZeXuBWRRDn/F2i', 'FFWjl86L9wCj1gXJnzTGNyYPM4jwYi95Zc628UWfHAdKTpAkoxM26DdNiW6t', 0, 'active', '2024-02-10 11:12:17', '2024-05-31 22:55:44'),
+(3, 'TeacherWals', 'teacher', 'teacherwals@gmail.com', NULL, '$2y$10$d.MgC66ykIKEU/iramDmDOVme2bbh5O2bjG4GNb33MXa6yBPoEE5S', 'wdV4uT6zzp6dnN4Qlvf4xy5UwOAxySaqYsImAdYLnFpwYRGZzO31UH5k9Y3v', 0, 'active', '2024-02-10 11:33:45', '2024-05-31 22:55:58'),
+(7, 'rianto', 'student', 'rianto@gmail.com', NULL, '$2y$10$oh7U/uqW255g/vizBuNnJ.0o1vdX3MrU1pspvQHCVAWnLLy57WCXy', NULL, 3, 'Active', '2024-07-19 22:38:27', '2024-07-19 22:38:27');
 
 -- --------------------------------------------------------
 
@@ -235,14 +222,9 @@ CREATE TABLE `validasi` (
 --
 
 INSERT INTO `validasi` (`id_validation`, `userid`, `id_percobaan`, `id_submit`, `status`, `time`, `report`, `file_submitted`, `create_at`, `update_at`) VALUES
-(1, 4, 1, 1, 'PASSED', NULL, '#This is a comment.\r\nprint(\"Hello, World!\")', '6663225e788cc_1717772894', '2024-06-07 15:08:14', '2024-06-07 15:08:14'),
-(2, 1, 1, 2, 'PASSED', NULL, '# Tuliskan kode program dibawah ini\nprint(\"Indonesia\")', '6663234de8d6e_1717773133', '2024-06-07 15:12:14', '2024-06-07 15:12:14'),
-(3, 1, 2, 3, 'PASSED', NULL, '# Tuliskan kode program dibawah ini\nx = str(\"s1\") \ny = str(2) \nz = str(3.0) \nprint(x)\nprint(y)\nprint(z)', '66632765bf888_1717774181', '2024-06-07 15:29:41', '2024-06-07 15:29:41'),
-(4, 1, 3, 4, 'PASSED', NULL, '# Tuliskan variabel dibawah ini\n\nx = str(\"s1\") \ny = str(2) \nz = str(3.0) \nprint(x)\nprint(y)\nprint(z)', '666327babfe95_1717774266', '2024-06-07 15:31:06', '2024-06-07 15:31:06'),
-(5, 1, 4, 5, 'PASSED', NULL, '# Tuliskan kode program dibawah ini\nx = str(\"s1\") \ny = str(2) \nz = str(3.0) \nprint(x+y+z)', '666327dbe6707_1717774299', '2024-06-07 15:31:40', '2024-06-07 15:31:40'),
-(6, 1, 5, 6, 'PASSED', NULL, '# Tuliskan variabel dibawah ini\n\nx = str(\"s1\")\ny = str(2)\nz = str(3.0)\nprint(x)\nprint(y)\nprint(z)', '6663944f13095_1717802063', '2024-06-07 23:14:23', '2024-06-07 23:14:23'),
-(7, 5, 2, 7, 'PASSED', NULL, '# Tuliskan kode program dibawah ini\ny=\"john\"\nprint(y)', '668a515bcb6e7_1720340827', '2024-07-07 08:27:08', '2024-07-07 08:27:08'),
-(8, 5, 5, 8, 'PASSED', NULL, '# Tuliskan variabel dibawah ini\n\n\nx = 1 # int\ny = 2.8 # float\nz = 1j # complex\n#convert from int to float:\na = float(x)\n#convert from float to int:\nb = int(y)\n#convert from int to complex:\nc = complex(x)\nprint(a)\nprint(b)\nprint(c)', '668a55a654e79_1720341926', '2024-07-07 08:45:26', '2024-07-07 08:45:26');
+(10, 7, 2, 10, 'PASSED', NULL, '# Tuliskan kode program dibawah ini\nx=5\ny=\"jhon\"\nprint(x)\nprint(y)', '669b4ea3b18a7_1721454243', '2024-07-20 05:44:03', '2024-07-20 05:44:03'),
+(11, 7, 1, 11, 'PASSED', NULL, '# Tuliskan kode program dibawah ini\nprint(\"Hello, World!\")', '669b4f09a8ed8_1721454345', '2024-07-20 05:45:45', '2024-07-20 05:45:45'),
+(12, 7, 3, 12, 'PASSED', NULL, '# Tuliskan variabel dibawah ini\n\n\n\numur = 23\ndef konversi(umur):\n return str(umur)\nprint(umur)', '669b5240204e3_1721455168', '2024-07-20 05:59:28', '2024-07-20 05:59:28');
 
 --
 -- Indexes for dumped tables
@@ -323,7 +305,7 @@ ALTER TABLE `percobaan`
 -- AUTO_INCREMENT untuk tabel `std_submit`
 --
 ALTER TABLE `std_submit`
-  MODIFY `id_submit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_submit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `teachers`
@@ -341,13 +323,13 @@ ALTER TABLE `topik`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `validasi`
 --
 ALTER TABLE `validasi`
-  MODIFY `id_validation` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_validation` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
