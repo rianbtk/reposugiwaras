@@ -14,9 +14,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>Wals - Administrator Site</title>
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{asset('lte/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('lte/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('AdminLTE/dist/css/AdminLTE.min.css')}}">
+  <!-- <link rel="stylesheet" href="{{asset('AdminLTE/dist/css/AdminLTE.css')}}"> -->
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -43,11 +44,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- REQUIRED SCRIPTS -->
 
   <!-- jQuery -->
-  <script src="{{asset('lte/plugins/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('AdminLTE/plugins/jquery/jquery.min.js')}}"></script>
   <!-- Bootstrap 4 -->
-  <script src="{{asset('lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <!-- AdminLTE App -->
-  <script src="{{asset('lte/dist/js/adminlte.min.js')}}"></script>
+  <script src="{{asset('AdminLTE/dist/js/AdminLTE.min.js')}}"></script>
 </body>
 
 </html>

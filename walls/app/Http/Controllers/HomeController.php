@@ -22,15 +22,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         if (Auth::user()->status == 'student') {
-            $check = \App\StudentTeacher::where('student', '=', Auth::user()->id);
-            return view('/student/pythoncourse/home')->with(['count' => $check->count()]);
-        } else if (Auth::user()->status == 'admin') {
+            $check = \App\StudentTeacher::where(
+                'student',
+                '=',
+                Auth::user()->id
+            );
+            return view('/student/pythoncourse/home')->with([
+                'count' => $check->count(),
+            ]);
+        } elseif (Auth::user()->status == 'admin') {
             return view('/admin/admin');
         } else {
             return view('/teacher/home');
         }
-
     }
 }

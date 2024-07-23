@@ -12,24 +12,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>Wals - Administrator Site</title>
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{asset('lte/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('lte/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('AdminLTE/dist/css/adminlte.min.css')}}">
+  <!-- <link rel="stylesheet" href="{{asset('AdminLTE/dist/css/adminlte.css')}}"> -->
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<div class="container">
 
   <!-- Navbar -->
 	@include('admin/header')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('admin/sidebar')
+  <!-- @include('admin/sidebar') -->
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="">
     <!-- Content Header (Page header) -->
     
     <!-- /.content-header -->
@@ -59,10 +60,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="{{asset('lte/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('AdminLTE/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('lte/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('AdminLTE/dist/js/adminlte.min.js')}}"></script>
 </body>
 </html>

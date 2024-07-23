@@ -99,8 +99,17 @@ class ResultController extends Controller
         return view('teacher.python.py_student_results', compact('allData', 'mhs', 'dosen'));
 
     }
+    public function student_name(){
+        $mhs = DB::table('users')->where('levelid', Auth::id())->count();
+        $dosen = DB::table('users')->where('id', Auth::id())->first();
+        $dt_hasil = array();
 
-    // detail
+        // ambil hasil berdasarkan id user
+        $studentname = DB::table("Users")->select('Users.*', 'id', 'name', 'email', 'status_id')
+            ->join('std_submit', 'std_submit.checkstat', '=', 'Users.id_submit')
+            ->where('std_submit.userid', Auth::id())->get();
+
+    }    // detail
     public function detail($id_topik, $id_percobaan)
     {
 

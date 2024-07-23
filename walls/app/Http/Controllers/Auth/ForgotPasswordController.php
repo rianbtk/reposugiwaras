@@ -3,9 +3,23 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\ConfirmsPasswords;
 
-class ForgotPasswordController extends Controller
+class ConfirmPasswordController extends Controller
 {
-    use SendsPasswordResetEmails;
+    use ConfirmsPasswords;
+
+    /**
+     * @var string
+     */
+    protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

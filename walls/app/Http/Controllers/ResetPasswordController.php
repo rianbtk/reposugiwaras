@@ -23,8 +23,9 @@ class ResetPasswordController extends Controller
             ->get();
 
         if (empty($cekExist[0])) {
-            return Redirect::to('admin/resetpassword')
-                ->withErrors('Email not Found!');
+            return Redirect::to('admin/resetpassword')->withErrors(
+                'Email not Found!'
+            );
         } else {
             return $this->update($request);
         }
@@ -46,19 +47,27 @@ class ResetPasswordController extends Controller
         $validator = Validator::make($request->all(), $rules, $msg);
 
         if ($validator->fails()) {
-            return Redirect::to('admin/resetpassword')
-                ->withErrors($validator);
+            return Redirect::to('admin/resetpassword')->withErrors($validator);
         } else {
-            $updateQuery = \App\ResetPassword::where('email', $request->get('email'))
-                ->update(['password' => Hash::make($request->get('newpassword'))]);
+            $updateQuery = \App\ResetPassword::where(
+                'email',
+                $request->get('email')
+            )->update(['password' => Hash::make($request->get('newpassword'))]);
 
             if ($updateQuery) {
-                Session::flash('message', 'Reset Password Success! Email: ' . $request->get('email') . ' Password: ' . $request->get('newpassword'));
+                Session::flash(
+                    'message',
+                    'Reset Password Success! Email: ' .
+                        $request->get('email') .
+                        ' Password: ' .
+                        $request->get('newpassword')
+                );
 
                 return Redirect::to('admin/resetpassword');
             } else {
-                return Redirect::to('admin/resetpassword')
-                    ->withErrors('Reset Password Failed!');
+                return Redirect::to('admin/resetpassword')->withErrors(
+                    'Reset Password Failed!'
+                );
             }
         }
     }

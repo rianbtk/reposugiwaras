@@ -15,6 +15,7 @@ use App\Http\Controllers\python\ExercisePythonController;
 use App\Http\Controllers\python\PythonLearningTopicsController;
 use App\Http\Controllers\python\PythonPercobaanController;
 use App\Http\Controllers\python\ResultController;
+use App\Http\Controllers\python\DatMahasController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +55,8 @@ Route::group(['middleware' => ['auth', 'teacher']], function () {
     // Python
     //tampilan result mahasiswa dari dosen
     Route::get('teacher/python/resultstudent', [ResultController::class, 'student_submit']);
+    Route::get('teacher/python/dat_mahas', [DatMahasController::class, 'index']);
+    // Route::get('/users', [UserController::class, 'index']);
     Route::get('teacher/python/resultstudentdetail/{id_topik}/{id_percobaan}', [ResultController::class, 'detail']);
 
 });

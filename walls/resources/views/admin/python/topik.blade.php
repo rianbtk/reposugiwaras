@@ -4,9 +4,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Python Learning Topics</h3>
                 <div class="card-tools">
-                    <a href="{{ URL::to('/admin/python/tambahtopik')}}" class="btn btn-tool">
+                    <a href="{{ URL::to('/admin/python/tambahtopik')}}" class="btn btn-secondary">
                     <i class="fa fa-plus"></i>
                     &nbsp; Add
                     </a>
@@ -21,7 +20,7 @@
                 @endif
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover" style="font-weight:bold">
                             <thead>
                                 <tr class="text-center">
                                     <th>ID Topik</th>
@@ -41,10 +40,10 @@
                                     <td>{{ $tp->deskripsi }}</td>
                                     <td>{{ $tp->status }}</td>
                                     <td align="center">
-                                        <a href="{{ url('/admin/python/proseshapustopik/'. $tp->id_topik) }}" onclick="return confirm('Apakah anda ingin menghapus topik ini ?')" class="btn btn-sm btn-danger">
+                                        <a href="{{ url('/admin/python/proseshapustopik/'. $tp->id_topik) }}" onclick="return confirm('Apakah anda ingin menghapus topik ini ?')" class="btn btn-sm btn-dark">
                                             <i class="fa fa-trash"></i>
                                         </a>
-                                        <a href="{{ url('/admin/python/edittopik/'. $tp->id_topik) }}" class="btn btn-sm btn-warning">
+                                        <a href="{{ url('/admin/python/edittopik/'. $tp->id_topik) }}" class="btn btn-sm btn-success">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
                                     </td>

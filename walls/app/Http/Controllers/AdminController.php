@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function index() {
+    public function index()
+    {
+        $entities = \App\AplasSummary::all();
 
-	$entities=\App\AplasSummary::all();
-
-        $data=['entities'=>$entities];
+        $data = ['entities' => $entities];
 
         return view('admin/main')->with($data);
     }
