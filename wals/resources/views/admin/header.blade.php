@@ -8,7 +8,7 @@
         <ul class="navbar-nav">
           <a href="{{URL::to('home')}}" class="navbar-brand">
           <img src="{{asset('AdminLTE/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-              style="opacity: ." width="40" height="25">
+              style="opacity: ." width="50" height="40">
           <span class="brand-text font-weight-light">Walls</span>
           </a>
           <li class="">

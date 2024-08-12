@@ -72,21 +72,21 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
 
-                                                <b>BAB {{ $isi_kolom->bab}} ({{ $isi_kolom->nama }})</b>
-                                                <h6 style="margin: 0px"><code>Percobaan {{$isi_kolom->no_percobaan}} :
+                                                <b class="" style="margin: 0px">BAB {{ $isi_kolom->bab}} ({{ $isi_kolom->nama }})</b>
+                                                <h6 class=" btn btn-dark btn-sm" style="margin: 0px"><code>Percobaan {{$isi_kolom->no_percobaan}} :
                                                         {{ $isi_kolom->nama_percobaan }}</code></h6>
                                                 <small>Pengerjaan pada
                                                     {{ date('d F Y H.i A', strtotime($isi_kolom->create_at)) }}</small>
                                                 <hr>
                                                 <b>Source Code Jawaban Anda :</b>
-                                                <div class="card card-body"
+                                                <div class="btn btn-success "
                                                     style="font-family: 'Courier New', Courier, monospace">
                                                     {{ $isi_kolom->report }}
                                                 </div>
-                                                <a href="{{ asset('python-resources/unittest/jawaban/'. $isi_kolom->file_submitted) }}.py"
+                                                <br>
+                                                <a class="btn btn-info" href="{{ asset('python-resources/unittest/jawaban/'. $isi_kolom->file_submitted) }}.py"
                                                     download>Unduh Source Code</a>
                                                 <br>
-                                                <small>Klik untuk mengunduh file jawaban</small><hr>
                                                 <b>Hasil Unit Test : </b><br>
                                                 <?php echo $isi_kolom->status ?>
                                             </div>
